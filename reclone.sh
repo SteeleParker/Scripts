@@ -5,6 +5,7 @@
 # Current target directory is ~/scripts
 
 rm -rf ~/scripts
+cd ~/
 mkdir ~/scripts
 git clone https://github.com/SteeleParker/Scripts.git ~/scripts
 cd ~/scripts
