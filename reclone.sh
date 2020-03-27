@@ -5,4 +5,5 @@
 # Current target directory is ~/scripts
 
 rm -rf ~/scripts
+ls -1 | xargs chmod u+x $1
 git clone https://github.com/SteeleParker/Scripts.git ~/scripts
