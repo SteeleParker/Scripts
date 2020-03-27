@@ -1,6 +1,7 @@
+#!/bin/bash
+
 # Source https://www.webtipblog.com/bash-script-create-apache-virtual-hosts/
 # Usage sudo ./addvhost.sh -u newsite.local -d mynewsite/web
-#!/bin/bash
 
 # permissions
 if [ "$(whoami)" != "root" ]; then
@@ -10,9 +11,9 @@ fi
 
 current_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 hosts_path="/etc/hosts"
-vhosts_path="/etc/apache2/sites-available/"
+vhosts_path="~/stack/apache2/conf/vhosts/"
 vhost_skeleton_path="$current_directory/vhost.skeleton.conf"
-web_root="/var/www/"
+web_root="~/www/"
 
 
 # user input passed as options?
