@@ -11,9 +11,9 @@ fi
 
 current_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 hosts_path="/etc/hosts"
-vhosts_path="~/stack/apache2/conf/vhosts/"
+vhosts_path="/home/bitnami/stack/apache2/conf/vhosts/"
 vhost_skeleton_path="$current_directory/vhost.skeleton.conf"
-web_root="~/www/"
+web_root="/home/bitnami/www"
 
 
 # user input passed as options?
