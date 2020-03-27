@@ -10,3 +10,4 @@ mkdir ~/scripts
 git clone https://github.com/SteeleParker/Scripts.git ~/scripts
 cd ~/scripts
 ls -1 | xargs chmod u+x $1
+cd ~/
