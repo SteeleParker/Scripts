@@ -72,11 +72,11 @@ echo 127.0.0.1    $site_url >> $hosts_path
 echo "Updated the hosts file"
 
 # restart apache
-echo "Enabling site in Apache..."
-echo `a2ensite $site_url`
+# echo "Enabling site in Apache..."
+# echo `a2ensite $site_url`
 
 echo "Restarting Apache..."
-echo `/etc/init.d/apache2 restart`
+echo `sudo /opt/bitnami/ctlscript.sh restart apache`
 
 echo "Process complete, check out the new site at http://$site_url"
 
