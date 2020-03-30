@@ -49,6 +49,14 @@ if [ $relative_doc_root == 0 ]; then
 #	read -p "Please enter the site path relative to the web root: $web_root_path" relative_doc_root
 fi
 
+# Guarantee apache is listening on 443
+isListening="$(cat ~/stack/apache2/conf/httpd.conf | grep 'listen 443')"
+if [  ${#isListening} == 0 ]; then 
+	# Make apache listen on 443
+	echo "
+Listen 443" >> ~/stack/apache2/conf/httpd.conf
+fi;
+
 # construct absolute path
 absolute_doc_root=$web_root$relative_doc_root
 
@@ -96,6 +104,3 @@ echo "Starting Apache..."
 echo `sudo /opt/bitnami/ctlscript.sh start apache`
 
 echo "Process complete, check out the new site at https://$site_url"
-
-
-
