@@ -50,12 +50,12 @@ if [ $relative_doc_root == 0 ]; then
 fi
 
 # Guarantee apache is listening on 443
-isListening="$(cat ~/stack/apache2/conf/httpd.conf | grep 'listen 443')"
-if [  ${#isListening} == 0 ]; then 
+#isListening="$(cat ~/stack/apache2/conf/httpd.conf | grep 'listen 443')"
+#if [  ${#isListening} == 0 ]; then 
 	# Make apache listen on 443
-	echo "
-Listen 443" >> ~/stack/apache2/conf/httpd.conf
-fi;
+#	echo "
+#Listen 443" >> ~/stack/apache2/conf/httpd.conf
+#fi;
 
 # construct absolute path
 absolute_doc_root=$web_root$relative_doc_root
