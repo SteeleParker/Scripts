@@ -11,6 +11,18 @@ It also uses certbot to attempt to generate a certificate of the same domain nam
 Usage: \
 `sudo ~/scripts/addvhost.sh -u newsite.local -d relative/root`
 
+### addsslvhost.sh
+---
+Purpose: \
+Updates an added vhost attaching a ssl certificate and updating apache config. For correct operation, the NS for the domain should refer to a DNS which has an A record for the domain.
+
+It also uses certbot to attempt to generate a certificate of the same domain name and update the vhost file.
+
+A .htaccess is added to the root directory forcing a redirect to SSL
+
+Usage: \
+`sudo ~/scripts/addsslvhost.sh -u newsite.local -d relative/root`
+
 
 ### reclone.sh
 ---
