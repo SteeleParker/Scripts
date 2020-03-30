@@ -36,8 +36,10 @@ if [ $site_url == 0 ]; then
 	read -p "Please enter the desired URL: " site_url
 fi
 
+# Default the relative doc root to the site url
 if [ $relative_doc_root == 0 ]; then
-	read -p "Please enter the site path relative to the web root: $web_root_path" relative_doc_root
+	$relative_doc_root = $site_url
+#	read -p "Please enter the site path relative to the web root: $web_root_path" relative_doc_root
 fi
 
 # construct absolute path
