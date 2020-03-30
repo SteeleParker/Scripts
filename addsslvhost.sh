@@ -28,7 +28,7 @@ while getopts ":u:d:p:" o; do
 		d)
 			relative_doc_root=${OPTARG}
 			;;
-		d)
+		p)
 			site_port=${OPTARG}
 			;;
 	esac
