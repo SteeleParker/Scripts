@@ -10,3 +10,8 @@ fi
 mkdir -p ~/.ssh
 cd ~/.ssh
 cat /dev/zero | ssh-keygen -m pem -f ~/.ssh/deploy_key -N ""
+
+echo "
+Host bitbucket
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/deploy_key" >> ~/.ssh/config
