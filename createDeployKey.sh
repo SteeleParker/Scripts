@@ -15,3 +15,5 @@ echo "
 Host bitbucket
     HostName bitbucket.org
     IdentityFile ~/.ssh/deploy_key" >> ~/.ssh/config
+    
+cat deploy_key.pub >> ~/.ssh/authorized_keys 
