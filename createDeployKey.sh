@@ -12,8 +12,9 @@ cd ~/.ssh
 cat /dev/zero | ssh-keygen -m pem -f ~/.ssh/deploy_key -N ""
 
 echo "
-Host bitbucket
-    HostName bitbucket.org
+Host bitbucket.org
     IdentityFile ~/.ssh/deploy_key" >> ~/.ssh/config
     
 cat deploy_key.pub >> ~/.ssh/authorized_keys 
+
+chmod 600 ~/.ssh/config
