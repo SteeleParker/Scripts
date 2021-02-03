@@ -1,16 +1,6 @@
 # Scripts
 Scripts for simplifying the deployment of AWS Lightsail Instances
 
-### addvhost.sh
----
-Purpose: \
-Creates a root relative to ~/www/ for a placeholder file, then adds a vHosts file using the template found in vhost.skeleton.conf
-
-It also uses certbot to attempt to generate a certificate of the same domain name and install said certificate within the skeleton file
-
-Usage: \
-`sudo ~/scripts/addvhost.sh -u newsite.local -d relative/root`
-
 ### addsslvhost.sh
 ---
 Purpose: \
